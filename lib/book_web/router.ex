@@ -16,6 +16,7 @@ defmodule BookWeb.Router do
   scope "/", BookWeb do
     pipe_through :browser
 
+    get "/hello/:name", HelloController, :world
     get "/", PageController, :index
   end
 
